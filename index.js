@@ -38,7 +38,7 @@ function fetchExercises() {
     })
     .then((data) => {
       console.log(data); // Output the list of exercises to console
-      displayExercises(data.results);
+      displayExercises(data);
     })
     .catch((error) => console.error("Error fetching exercises:", error));
 }
