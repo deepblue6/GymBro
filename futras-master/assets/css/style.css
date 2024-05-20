@@ -17,16 +17,16 @@
 
   --blue-green-color-wheel_60: hsla(165, 77%, 17%, 0.6);
   --blue-green-color-wheel_10: hsla(165, 77%, 17%, 0.1);
-  --blue-green-color-wheel: hsl(165, 77%, 17%);
+  --blue-green-color-wheel: hsl(165, 16%, 48%);
   --black-chocolate: hsl(32, 24%, 14%);
   --spanish-gray: hsl(210, 3%, 62%);
   --orange-web: hsl(38, 100%, 50%);
   --davys-gray: hsl(213, 5%, 34%);
   --light-gray: hsl(0, 0%, 80%);
   --msu-green: hsl(165, 77%, 15%);
-  --cultured: hsl(30, 22%, 96%);
+  --cultured: hsl(30, 62%, 56%);
   --white_15: hsl(0, 0%, 100%, 0.15);
-  --white: hsl(0, 0%, 100%);
+  --white: hsl(242, 98%, 83%);
   --onyx: hsl(210, 10%, 23%);
 
   /**
