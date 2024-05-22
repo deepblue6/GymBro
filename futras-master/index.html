@@ -5,13 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GymBro</title>
-
     <!-- favicon -->
     <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
-
     <!-- custom css link -->
     <link rel="stylesheet" href="./assets/css/style.css" />
-
     <!-- google font link -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,41 +16,15 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600&display=swap"
       rel="stylesheet"
     />
+    <style>
+      /* Your custom styles here */
+    </style>
   </head>
-
   <body id="top">
     <!-- HEADER -->
     <header class="header" data-header>
-      <div class="container">
-        <a href="#" class="logo"> GymBro<span class="span">.</span> </a>
-
-        <nav class="navbar" data-navbar>
-          <button
-            class="nav-toggle-btn"
-            aria-label="close menu"
-            data-nav-toggler
-          >
-            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
-          </button>
-
-          <ul class="navbar-list">
-            <li class="navbar-item">
-              <a href="#home" class="navbar-link" data-nav-link>Home</a>
-            </li>
-            <li class="navbar-item">
-              <a href="#course" class="navbar-link" data-nav-link>All Course</a>
-            </li>
-          </ul>
-        </nav>
-
-        <button class="nav-toggle-btn" aria-label="open menu" data-nav-toggler>
-          <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
-        </button>
-
-        <div class="overlay" data-nav-toggler data-overlay></div>
-      </div>
+      <!-- Your header content -->
     </header>
-
     <main>
       <article>
         <!-- HERO -->
@@ -62,135 +33,40 @@
           aria-label="hero"
           id="home"
           data-section
-          style="background-image: url('./assets/images/Full-Planche.jpg')"
+          style="
+            background-image: url('./assets/images/Full-Planche.jpg');
+            text-align: center;
+          "
         >
-          <div class="container">
-            <p class="hero-subtitle">Master your bodyweight</p>
-            <h1 class="h1 hero-title">Learn how to be healthy, for life</h1>
-            <div class="social-wrapper"></div>
-          </div>
-        </section>
-
-        <!-- SERVICE -->
-        <section class="section courses" aria-label="courses" data-section>
-          <div class="container">
-            <h2 class="section-title">Select a Course Level</h2>
-
-            <!-- Beginner Course Section -->
-            <div class="service-wrapper" id="beginner-course">
-              <h3 class="course-title">Beginner Course</h3>
-              <ul class="grid-list">
-                <li>
-                  <div class="service-card">
-                    <img
-                      src="./assets/images/beginner-course.jpeg"
-                      width="60"
-                      height="60"
-                      loading="lazy"
-                      alt="Beginner Course"
-                    />
-                    <h3 class="h3">
-                      <a href="#" class="card-title"
-                        >Introduction to Calisthenics</a
-                      >
-                    </h3>
-                    <p class="card-text">
-                      Learn basic bodyweight exercises like push-ups, squats,
-                      and lunges.
-                    </p>
-                    <a
-                      href="#"
-                      class="btn btn-secondary show-workout"
-                      data-course="beginner"
-                      >Show Workout</a
-                    >
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Intermediate Course Section -->
-            <div class="service-wrapper" id="intermediate-course">
-              <h3 class="course-title">Intermediate Course</h3>
-              <ul class="grid-list">
-                <li>
-                  <div class="service-card">
-                    <img
-                      src="./assets/images/intermediate-course.jpeg"
-                      width="60"
-                      height="60"
-                      loading="lazy"
-                      alt="Intermediate Course"
-                    />
-                    <h3 class="h3">
-                      <a href="#" class="card-title"
-                        >Advanced Calisthenics Techniques</a
-                      >
-                    </h3>
-                    <p class="card-text">
-                      Advance your skills with exercises like muscle-ups,
-                      handstand push-ups, and pistol squats.
-                    </p>
-                    <a
-                      href="#"
-                      class="btn btn-secondary show-workout"
-                      data-course="intermediate"
-                      >Show Workout</a
-                    >
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Advanced Course Section -->
-            <div class="service-wrapper" id="advanced-course">
-              <h3 class="course-title">Advanced Course</h3>
-              <ul class="grid-list">
-                <li>
-                  <div class="service-card">
-                    <img
-                      src="./assets/images/advanced-course.jpeg"
-                      width="60"
-                      height="60"
-                      loading="lazy"
-                      alt="Advanced Course"
-                    />
-                    <h3 class="h3">
-                      <a href="#" class="card-title">Mastering Calisthenics</a>
-                    </h3>
-                    <p class="card-text">
-                      Master advanced bodyweight exercises and optimize your
-                      performance.
-                    </p>
-                    <a
-                      href="#"
-                      class="btn btn-secondary show-workout"
-                      data-course="advanced"
-                      >Show Workout</a
-                    >
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
+          <!-- Your hero section content -->
         </section>
       </article>
     </main>
-
+    <!-- Buttons to select workout levels -->
+    <section class="workout-levels">
+      <div class="container">
+        <h2 class="section-title">Select a Workout Level</h2>
+        <div class="button-group">
+          <a href="beginner.html" class="workout-button">Beginner</a>
+          <a href="intermediate.html" class="workout-button">Intermediate</a>
+          <a href="advanced.html" class="workout-button">Advanced</a>
+        </div>
+      </div>
+    </section>
+    <!-- Button to fetch exercises -->
+    <section class="exercise-section">
+      <div class="container">
+        <!-- Your button to fetch exercises -->
+      </div>
+    </section>
     <!-- Workout Modal -->
     <div class="modal" id="workout-modal">
       <div class="modal-content">
-        <span class="close-modal" id="close-modal">&times;</span>
-        <h2 class="modal-title">Workout</h2>
-        <div id="workout-exercises">
-          <!-- Workout exercises will be dynamically populated here -->
-        </div>
+        <!-- Your modal content -->
       </div>
     </div>
-
     <!-- custom js link -->
     <script src="./assets/js/script.js" defer></script>
-
     <!-- ionicon link -->
     <script
       type="module"
@@ -200,5 +76,32 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+    <script>
+      // JavaScript code to handle button clicks and redirection
+      document.addEventListener("DOMContentLoaded", () => {
+        // Get references to the buttons
+        const beginnerButton = document.getElementById("beginner-button");
+        const intermediateButton = document.getElementById(
+          "intermediate-button"
+        );
+        const advancedButton = document.getElementById("advanced-button");
+
+        // Add click event listeners to each button
+        beginnerButton.addEventListener("click", () =>
+          redirectToWorkoutPage("beginner")
+        );
+        intermediateButton.addEventListener("click", () =>
+          redirectToWorkoutPage("intermediate")
+        );
+        advancedButton.addEventListener("click", () =>
+          redirectToWorkoutPage("advanced")
+        );
+
+        // Function to redirect to the workout page with the selected level
+        const redirectToWorkoutPage = (level) => {
+          window.location.href = `workout.html?level=${level}`;
+        };
+      });
+    </script>
   </body>
 </html>

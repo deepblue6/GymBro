@@ -1,15 +1,9 @@
 "use strict";
 
-/**
- * Utility function to add an event listener to elements
- */
 const addEventOnElem = (elems, type, callback) => {
   elems.forEach((elem) => elem.addEventListener(type, callback));
 };
 
-/**
- * Navbar toggle
- */
 const navbar = document.querySelector("[data-navbar]");
 const navTogglers = document.querySelectorAll("[data-nav-toggler]");
 const navLinks = document.querySelectorAll("[data-nav-link]");
@@ -28,9 +22,6 @@ const closeNavbar = () => {
 addEventOnElem(navTogglers, "click", toggleNavbar);
 addEventOnElem(navLinks, "click", closeNavbar);
 
-/**
- * Header active state on scroll
- */
 const header = document.querySelector("[data-header]");
 const backTopBtn = document.querySelector("[data-back-top-btn]");
 
@@ -40,9 +31,6 @@ window.addEventListener("scroll", () => {
   backTopBtn.classList[activeClass]("active");
 });
 
-/**
- * Scroll reveal effect
- */
 const sections = document.querySelectorAll("[data-section]");
 
 const reveal = () => {
@@ -102,3 +90,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
   reveal(); // Initial call to reveal elements on page load
 });
+
+document
+  .getElementById("fetch-exercises-button")
+  .addEventListener("click", fetchExercises);
+
+function fetchExercises() {
+  const muscle = prompt(
+    "Enter a muscle group (e.g., chest, back, legs):"
+  ).toLowerCase();
+  const apiKey = "4h4Y+M6Ozow9Y1GnLh1PSg==EKiD6WFfoMqPmwtT"; // Replace with your actual API key
+  const url = `https://api.api-ninjas.com/v1/exercises?muscle=${muscle}`;
+
+  fetch(url, {
+    method: "GET",
+    headers: {
+      "X-Api-Key": apiKey,
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      displayExercises(data);
+    })
+    .catch((error) => {
+      console.error("Error fetching exercises:", error);
+    });
+}
+
+function displayExercises(exercises) {
+  const exerciseList = document.getElementById("exercise-list");
+  exerciseList.innerHTML = ""; // Clear previous list items
+
+  exercises.forEach((exercise) => {
+    const listItem = document.createElement("li");
+    listItem.textContent = exercise.name;
+    exerciseList.appendChild(listItem);
+  });
+}
