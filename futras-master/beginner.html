@@ -46,15 +46,36 @@
       }
       .timer {
         display: flex;
-        justify-content: center;
-        align-items: center;
         flex-direction: column;
+        align-items: center;
         margin: 20px 0;
       }
+      #timerDisplay {
+        font-size: 2em;
+        margin-bottom: 10px;
+      }
+      .timer-buttons {
+        display: flex;
+        gap: 10px;
+      }
       .timer-buttons button {
-        margin: 5px;
         padding: 10px 20px;
         font-size: 16px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: #333;
+        color: #fff;
+      }
+      #setButton {
+        margin-bottom: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: #333;
+        color: #fff;
       }
       footer {
         background: #333;
@@ -72,12 +93,16 @@
       <h1>Beginner Workout</h1>
     </header>
     <nav>
-      <a href="#home">Home</a>
-      <a href="#workouts">Workouts</a>
-      <a href="#contact">Contact</a>
+      <a href="index.html">Home</a>
     </nav>
     <main>
       <div class="timer">
+        <input
+          type="number"
+          id="timeInput"
+          placeholder="Enter time in seconds"
+        />
+        <button id="setButton">Set Timer</button>
         <div id="timerDisplay">00:00</div>
         <div class="timer-buttons">
           <button id="startButton">Start</button>
@@ -85,53 +110,43 @@
           <button id="resetButton">Reset</button>
         </div>
       </div>
+      </article>
       <article class="workout">
         <h2>Dips</h2>
         <img
           src="dips.gif"
-          alt="Dips exercise"
-          style="width: 300px; height: auto"
-        />
-        <p>Go down and then up slowly</p>
-      </article>
-      <article class="workout">
-        <h2>Pull ups</h2>
-        <img
-          src="pull up.gif"
-          alt="Squat exercise"
+          alt="Push-Ups"
           style="width: 300px; height: auto"
         />
         <p>
-          Stand with your feet shoulder-width apart. Bend your knees and lower
-          your body as if you're sitting back into a chair. Keep your back
-          straight and return to the starting position.
+          Begin in a plank position with hands slightly wider than
+          shoulder-width apart. Lower your body until your chest almost touches
+          the floor, then push back up to the starting position. Keep your core
+          tight throughout the movement.
         </p>
       </article>
       <article class="workout">
-        <h2>Face Pulls</h2>
-        <img
-          src="face pull.gif"
-          alt="Face Pulls exercise"
-          style="width: 300px; height: auto"
-        />
+        <h2>Squats</h2>
+        <img src="squats.gif" alt="Plank" style="width: 300px; height: auto" />
         <p>
-          Using a rope attachment on a cable machine, pull the rope towards your
-          face while keeping your elbows high. Squeeze your shoulder blades
-          together and return to the starting position.
+          Start in a forearm plank position, with your body in a straight line
+          from head to heels. Hold this position, keeping your core engaged and
+          avoiding sagging in your hips or back.
         </p>
       </article>
       <article class="workout">
-        <h2>Lateral Raises</h2>
+        <h2>Deadlift</h2>
         <img
-          src="lateral raise.gif"
-          alt="Lateral Raise exercise"
+          src="deadlift.gif"
+          alt="Glute Bridge"
           style="width: 300px; height: auto"
         />
         <p>
-          Stand with your feet shoulder-width apart, holding dumbbells at your
-          sides. Raise your arms out to the sides until they are level with your
-          shoulders, then lower them back down.
+          Lie on your back with your knees bent and feet flat on the floor. Lift
+          your hips toward the ceiling by squeezing your glutes, then lower back
+          down. Keep your core tight and avoid overarching your back.
         </p>
+      </article>
       </article>
     </main>
     <footer>
