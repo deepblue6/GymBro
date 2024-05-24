@@ -44,6 +44,18 @@
         max-width: 100%;
         border-radius: 5px;
       }
+      .timer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 20px 0;
+      }
+      .timer-buttons button {
+        margin: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+      }
       footer {
         background: #333;
         color: #fff;
@@ -65,46 +77,66 @@
       <a href="#contact">Contact</a>
     </nav>
     <main>
-
-
-
-     <article class="workout">
-  <h2>Dips</h2>
-  <img src="dips.gif" alt="Dips exercise" style="width:300px;height:auto;" />
-  <p>Go down and then up slowly</p>
-</article>
-<article class="workout">
-  <h2>Pull ups</h2>
-  <img src="pull up.gif" alt="Squat exercise" style="width:300px;height:auto;" />
-  <p>
-    Stand with your feet shoulder-width apart. Bend your knees and lower
-    your body as if you're sitting back into a chair. Keep your back
-    straight and return to the starting position.
-  </p>
-</article>
-<article class="workout">
-  <h2>Face Pulls</h2>
-  <img src="face pull.gif" alt="Face Pulls exercise" style="width:300px;height:auto;" />
-  <p>
-    Using a rope attachment on a cable machine, pull the rope towards your face while keeping your elbows high. Squeeze your shoulder blades together and return to the starting position.
-  </p>
-</article>
-<article class="workout">
-  <h2>Lateral Raises</h2>
-  <img src="lateral raise.gif" alt="Lateral Raise exercise" style="width:300px;height:auto;" />
-  <p>
-    Stand with your feet shoulder-width apart, holding dumbbells at your sides. Raise your arms out to the sides until they are level with your shoulders, then lower them back down.
-  </p>
-</article>
-
-
-
-          
-        <!-- Add more workout articles here -->
-      </section>
+      <div class="timer">
+        <div id="timerDisplay">00:00</div>
+        <div class="timer-buttons">
+          <button id="startButton">Start</button>
+          <button id="pauseButton">Pause</button>
+          <button id="resetButton">Reset</button>
+        </div>
+      </div>
+      <article class="workout">
+        <h2>Dips</h2>
+        <img
+          src="dips.gif"
+          alt="Dips exercise"
+          style="width: 300px; height: auto"
+        />
+        <p>Go down and then up slowly</p>
+      </article>
+      <article class="workout">
+        <h2>Pull ups</h2>
+        <img
+          src="pull up.gif"
+          alt="Squat exercise"
+          style="width: 300px; height: auto"
+        />
+        <p>
+          Stand with your feet shoulder-width apart. Bend your knees and lower
+          your body as if you're sitting back into a chair. Keep your back
+          straight and return to the starting position.
+        </p>
+      </article>
+      <article class="workout">
+        <h2>Face Pulls</h2>
+        <img
+          src="face pull.gif"
+          alt="Face Pulls exercise"
+          style="width: 300px; height: auto"
+        />
+        <p>
+          Using a rope attachment on a cable machine, pull the rope towards your
+          face while keeping your elbows high. Squeeze your shoulder blades
+          together and return to the starting position.
+        </p>
+      </article>
+      <article class="workout">
+        <h2>Lateral Raises</h2>
+        <img
+          src="lateral raise.gif"
+          alt="Lateral Raise exercise"
+          style="width: 300px; height: auto"
+        />
+        <p>
+          Stand with your feet shoulder-width apart, holding dumbbells at your
+          sides. Raise your arms out to the sides until they are level with your
+          shoulders, then lower them back down.
+        </p>
+      </article>
     </main>
     <footer>
       <p>&copy; 2024 Beginner Workout</p>
     </footer>
+    <script src="timer.js"></script>
   </body>
 </html>

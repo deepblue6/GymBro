@@ -44,6 +44,18 @@
         max-width: 100%;
         border-radius: 5px;
       }
+      .timer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 20px 0;
+      }
+      .timer-buttons button {
+        margin: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+      }
       footer {
         background: #333;
         color: #fff;
@@ -65,51 +77,90 @@
       <a href="#contact">Contact</a>
     </nav>
     <main>
-
-
-
-     <article class="workout">
-  <h2>Close-Grip Bench</h2>
-  <img src="close grip bench press.gif" alt="Close Grip Bench Press Exercise" style="width:300px;height:auto;" />
-  <p>The close-grip bench press is a strength exercise targeting the triceps, chest, and shoulders, performed by pressing a barbell upward with hands shoulder-width apart or closer. To start, lower the barbell to your mid-chest with elbows tucked in, then press it back up focusing on chest engagement.</p>
-</article>
-<article class="workout">
-  <h2>Front Squat</h2>
-  <img src="front squat.gif" alt="Front Squat exercise" style="width:300px;height:auto;" />
-  <p>
-    To perform the front squat, stand with feet shoulder-width apart, hold the barbell on your front shoulders with elbows high, and lower into a squat until your thighs are parallel to the ground. Keep your chest up and core tight, then drive through your heels to return to standing.
-  </p>
-</article>
-<article class="workout">
-  <h2>Dumbell Row</h2>
-  <img src="Dumbbell-Row.gif" alt="Dumbbell Row Exercise" style="width:300px;height:auto;" />
-  <p>
-    To perform a dumbbell row, bend at the waist with a dumbbell in one hand, keeping your back straight and your knee and hand on a bench for support. Pull the dumbbell toward your hip, squeezing your shoulder blade, then lower it back down with control.
-  </p>
-</article>
-<article class="workout">
-  <h2>Arnold Shoulder Press</h2>
-  <img src="arnold-press.gif" alt="Arnold Shoulder Press" style="width:300px;height:auto;" />
-  <p>
-To perform an Arnold shoulder press, start seated with a dumbbell in each hand, palms facing your shoulders. Press the dumbbells overhead while rotating your palms outward, then reverse the motion to return to the starting position.
-  </p>
-</article>
-<article class="workout">
-  <h2>RDL(Romanian Deadlift)</h2>
-  <img src="Romanian-deadlift.gif" alt="Romanian Deadlift" style="width:300px;height:auto;" />
-  <p>
-    To perform a Romanian deadlift, stand with feet hip-width apart, holding a barbell with an overhand grip in front of your thighs. With a slight bend in your knees, hinge at your hips to lower the barbell down your legs, keeping your back straight, then return to the starting position by driving your hips forward.
-  </p>
-</article>
-
-
-
-          
-        <!-- Add more workout articles here -->
-      </section>
+      <div class="timer">
+        <div id="timerDisplay">00:00</div>
+        <div class="timer-buttons">
+          <button id="startButton">Start</button>
+          <button id="pauseButton">Pause</button>
+          <button id="resetButton">Reset</button>
+        </div>
+      </div>
+      <article class="workout">
+        <h2>Close-Grip Bench</h2>
+        <img
+          src="close grip bench press.gif"
+          alt="Close Grip Bench Press Exercise"
+          style="width: 300px; height: auto"
+        />
+        <p>
+          The close-grip bench press is a strength exercise targeting the
+          triceps, chest, and shoulders, performed by pressing a barbell upward
+          with hands shoulder-width apart or closer. To start, lower the barbell
+          to your mid-chest with elbows tucked in, then press it back up
+          focusing on chest engagement.
+        </p>
+      </article>
+      <article class="workout">
+        <h2>Front Squat</h2>
+        <img
+          src="front squat.gif"
+          alt="Front Squat exercise"
+          style="width: 300px; height: auto"
+        />
+        <p>
+          To perform the front squat, stand with feet shoulder-width apart, hold
+          the barbell on your front shoulders with elbows high, and lower into a
+          squat until your thighs are parallel to the ground. Keep your chest up
+          and core tight, then drive through your heels to return to standing.
+        </p>
+      </article>
+      <article class="workout">
+        <h2>Dumbell Row</h2>
+        <img
+          src="Dumbbell-Row.gif"
+          alt="Dumbbell Row Exercise"
+          style="width: 300px; height: auto"
+        />
+        <p>
+          To perform a dumbbell row, bend at the waist with a dumbbell in one
+          hand, keeping your back straight and your knee and hand on a bench for
+          support. Pull the dumbbell toward your hip, squeezing your shoulder
+          blade, then lower it back down with control.
+        </p>
+      </article>
+      <article class="workout">
+        <h2>Arnold Shoulder Press</h2>
+        <img
+          src="arnold-press.gif"
+          alt="Arnold Shoulder Press"
+          style="width: 300px; height: auto"
+        />
+        <p>
+          To perform an Arnold shoulder press, start seated with a dumbbell in
+          each hand, palms facing your shoulders. Press the dumbbells overhead
+          while rotating your palms outward, then reverse the motion to return
+          to the starting position.
+        </p>
+      </article>
+      <article class="workout">
+        <h2>RDL(Romanian Deadlift)</h2>
+        <img
+          src="Romanian-deadlift.gif"
+          alt="Romanian Deadlift"
+          style="width: 300px; height: auto"
+        />
+        <p>
+          To perform a Romanian deadlift, stand with feet hip-width apart,
+          holding a barbell with an overhand grip in front of your thighs. With
+          a slight bend in your knees, hinge at your hips to lower the barbell
+          down your legs, keeping your back straight, then return to the
+          starting position by driving your hips forward.
+        </p>
+      </article>
     </main>
     <footer>
       <p>&copy; 2024 Advanced Workout</p>
     </footer>
+    <script src="timer.js"></script>
   </body>
 </html>
