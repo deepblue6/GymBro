@@ -5,12 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Beginner Workout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600&display=swap"
+      rel="stylesheet"
+    />
     <style>
       body {
-        font-family: Arial, sans-serif;
+        font-family: "Montserrat", sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #f4f4f4;
+        background: linear-gradient(to right, #e0eafc, #cfdef3);
+        color: #333;
       }
       header {
         background: #333;
@@ -21,28 +28,33 @@
       nav {
         background: #444;
         padding: 10px;
+        text-align: center;
       }
       nav a {
         color: #fff;
         margin: 0 10px;
         text-decoration: none;
+        font-weight: 500;
       }
       main {
         padding: 20px;
       }
-      h1 {
+      h1,
+      h2 {
+        font-family: "Playfair Display", serif;
         color: #333;
       }
       .workout {
         background: #fff;
         padding: 20px;
-        margin: 10px 0;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin: 20px 0;
+        border-radius: 10px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
       }
       .workout img {
         max-width: 100%;
-        border-radius: 5px;
+        border-radius: 10px;
+        margin-bottom: 15px;
       }
       .timer {
         display: flex;
@@ -58,17 +70,8 @@
         display: flex;
         gap: 10px;
       }
-      .timer-buttons button {
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-        border: none;
-        border-radius: 5px;
-        background-color: #333;
-        color: #fff;
-      }
+      .timer-buttons button,
       #setButton {
-        margin-bottom: 10px;
         padding: 10px 20px;
         font-size: 16px;
         cursor: pointer;
@@ -76,6 +79,12 @@
         border-radius: 5px;
         background-color: #333;
         color: #fff;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+      .timer-buttons button:hover,
+      #setButton:hover {
+        background-color: #555;
+        transform: scale(1.05);
       }
       footer {
         background: #333;
@@ -110,16 +119,15 @@
           <button id="resetButton">Reset</button>
         </div>
       </div>
-      </article>
       <article class="workout">
         <h2>Dips</h2>
-        <img
-          src="dips.gif"
-          alt="Dips"
-          style="width: 300px; height: auto"
-        />
+        <img src="dips.gif" alt="Dips" style="width: 300px; height: auto" />
         <p>
-          Grab the two handles and slowly let your body descend. Once down, push yourself up, utilizing your triceps and chest muscles. Keep your core tight and your knees bent. If you find these too easy or too hard, you could add a resistance band as support or add weighted plates to make it harder.
+          Grab the two handles and slowly let your body descend. Once down, push
+          yourself up, utilizing your triceps and chest muscles. Keep your core
+          tight and your knees bent. If you find these too easy or too hard, you
+          could add a resistance band as support or add weighted plates to make
+          it harder.
         </p>
       </article>
       <article class="workout">
@@ -153,14 +161,65 @@
           style="width: 300px; height: auto"
         />
         <p>
-          Adjust the seat so that you start off with your legs fully retracted. Adjust the weight to one you feel comfortable with. Push the weight away. Don't lock your knees fully to reduce risk of injury. Be sure to stay seated and don't slide up in order to ensure full quad activation.
+          Adjust the seat so that you start off with your legs fully retracted.
+          Adjust the weight to one you feel comfortable with. Push the weight
+          away. Don't lock your knees fully to reduce risk of injury. Be sure to
+          stay seated and don't slide up in order to ensure full quad
+          activation.
         </p>
-      </article>
       </article>
     </main>
     <footer>
       <p>&copy; 2024 Beginner Workout</p>
     </footer>
-    <script src="timer.js"></script>
+    <script>
+      // JavaScript code for timer functionality
+      document.addEventListener("DOMContentLoaded", () => {
+        let timer;
+        let timeLeft;
+        const timeInput = document.getElementById("timeInput");
+        const setButton = document.getElementById("setButton");
+        const timerDisplay = document.getElementById("timerDisplay");
+        const startButton = document.getElementById("startButton");
+        const pauseButton = document.getElementById("pauseButton");
+        const resetButton = document.getElementById("resetButton");
+
+        setButton.addEventListener("click", () => {
+          timeLeft = parseInt(timeInput.value, 10);
+          updateTimerDisplay();
+        });
+
+        startButton.addEventListener("click", () => {
+          if (timeLeft > 0 && !timer) {
+            timer = setInterval(() => {
+              timeLeft--;
+              updateTimerDisplay();
+              if (timeLeft <= 0) {
+                clearInterval(timer);
+                timer = null;
+              }
+            }, 1000);
+          }
+        });
+
+        pauseButton.addEventListener("click", () => {
+          clearInterval(timer);
+          timer = null;
+        });
+
+        resetButton.addEventListener("click", () => {
+          clearInterval(timer);
+          timer = null;
+          timeLeft = 0;
+          updateTimerDisplay();
+        });
+
+        function updateTimerDisplay() {
+          timerDisplay.textContent = `${String(
+            Math.floor(timeLeft / 60)
+          ).padStart(2, "0")}:${String(timeLeft % 60).padStart(2, "0")}`;
+        }
+      });
+    </script>
   </body>
 </html>
