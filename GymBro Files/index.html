@@ -190,32 +190,120 @@
         </section>
       </article>
     </main>
+    <style>
+      /* Additional CSS for professional styling */
+      .workout-levels {
+        padding: 50px 0;
+      }
+
+      .section-title {
+        color: #ffffff; /* White color */
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 50px;
+      }
+
+      .button-group {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .workout-button {
+        margin: 20px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff; /* White color */
+        text-decoration: none;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .workout-button:hover {
+        opacity: 0.8;
+      }
+
+      .workout-description {
+        text-align: center;
+        color: #ffffff; /* White color */
+      }
+
+      .workout-description h3 {
+        margin-top: 30px;
+      }
+
+      .workout-description p {
+        margin: 20px 0;
+      }
+
+      .workout-description ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .workout-description li {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+      }
+
+      .workout-description li ion-icon {
+        margin-right: 10px;
+      }
+    </style>
+
     <!-- Workout Levels Section -->
     <section class="workout-levels">
       <div class="container">
-        <h2 class="section-title">Select a Workout Level</h2>
+        <h2 class="section-title" style="font-size: 300%">
+          Select a Workout Level
+        </h2>
         <div class="button-group">
-          <a href="beginner.html" class="workout-button" id="beginner-button">
-            <img
-              src="assets/images/beginner-course.jpeg"
-              alt="Beginner"
-              loading="lazy"
-            />
-            <span>Beginner</span>
+          <a
+            href="beginner.html"
+            class="workout-button"
+            id="beginner-button"
+            style="
+              width: 400px;
+              height: 400px;
+              background-image: url('assets/images/beginner-course.jpeg');
+            "
+          >
+            <span style="font-size: 6rem">Beginner</span>
           </a>
           <div class="workout-description">
-            <h3><ion-icon name="barbell-outline"></ion-icon> Beginner</h3>
-            <p>
+            <h3 style="font-size: 3rem">
+              <ion-icon
+                style="font-size: 4rem"
+                name="barbell-outline"
+              ></ion-icon>
+              Beginner
+            </h3>
+            <p style="font-size: 2.4rem">
               Ideal for those just starting out on their fitness journey. Gentle
               and easy exercises to get you moving.
             </p>
             <ul>
-              <li>
-                <ion-icon name="checkmark-outline"></ion-icon> Suitable for
-                beginners
+              <li style="font-size: 2.4rem">
+                <ion-icon
+                  style="font-size: 3rem"
+                  name="checkmark-outline"
+                ></ion-icon>
+                Suitable for beginners
               </li>
-              <li>
-                <ion-icon name="timer-outline"></ion-icon> Duration: 30 minutes
+              <li style="font-size: 2.4rem">
+                <ion-icon
+                  style="font-size: 3rem"
+                  name="timer-outline"
+                ></ion-icon>
+                Duration: 30 minutes
               </li>
               <!-- Add more pros/cons or extra helpful information here -->
             </ul>
@@ -225,52 +313,83 @@
             href="intermediate.html"
             class="workout-button"
             id="intermediate-button"
+            style="
+              width: 400px;
+              height: 400px;
+              background-image: url('assets/images/intermediate-course.jpeg');
+            "
           >
-            <img
-              src="assets/images/intermediate-course.jpeg"
-              alt="Intermediate"
-              loading="lazy"
-            />
-            <span>Intermediate</span>
+            <span style="font-size: 6rem">Intermediate</span>
           </a>
           <div class="workout-description">
-            <h3><ion-icon name="barbell-outline"></ion-icon> Intermediate</h3>
-            <p>
+            <h3 style="font-size: 3rem">
+              <ion-icon
+                style="font-size: 4rem"
+                name="barbell-outline"
+              ></ion-icon>
+              Intermediate
+            </h3>
+            <p style="font-size: 2.4rem">
               Perfect for those who have a basic level of fitness and are
               looking to challenge themselves more.
             </p>
             <ul>
-              <li>
-                <ion-icon name="checkmark-outline"></ion-icon> Moderate
-                intensity
+              <li style="font-size: 2.4rem">
+                <ion-icon
+                  style="font-size: 3rem"
+                  name="checkmark-outline"
+                ></ion-icon>
+                Moderate intensity
               </li>
-              <li>
-                <ion-icon name="timer-outline"></ion-icon> Duration: 45 minutes
+              <li style="font-size: 2.4rem">
+                <ion-icon
+                  style="font-size: 3rem"
+                  name="timer-outline"
+                ></ion-icon>
+                Duration: 45 minutes
               </li>
               <!-- Add more pros/cons or extra helpful information here -->
             </ul>
           </div>
 
-          <a href="advanced.html" class="workout-button" id="advanced-button">
-            <img
-              src="assets/images/advanced-course.jpeg"
-              alt="Advanced"
-              loading="lazy"
-            />
-            <span>Advanced</span>
+          <a
+            href="advanced.html"
+            class="workout-button"
+            id="advanced-button"
+            style="
+              width: 400px;
+              height: 400px;
+              background-image: url('assets/images/advanced-course.jpeg');
+            "
+          >
+            <span style="font-size: 6rem">Advanced</span>
           </a>
           <div class="workout-description">
-            <h3><ion-icon name="barbell-outline"></ion-icon> Advanced</h3>
-            <p>
+            <h3 style="font-size: 3rem">
+              <ion-icon
+                style="font-size: 4rem"
+                name="barbell-outline"
+              ></ion-icon>
+              Advanced
+            </h3>
+            <p style="font-size: 2.4rem">
               Designed for those who are already highly fit and want to push
               their limits to the max.
             </p>
             <ul>
-              <li>
-                <ion-icon name="checkmark-outline"></ion-icon> High intensity
+              <li style="font-size: 2.4rem">
+                <ion-icon
+                  style="font-size: 3rem"
+                  name="checkmark-outline"
+                ></ion-icon>
+                High intensity
               </li>
-              <li>
-                <ion-icon name="timer-outline"></ion-icon> Duration: 60 minutes
+              <li style="font-size: 2.4rem">
+                <ion-icon
+                  style="font-size: 3rem"
+                  name="timer-outline"
+                ></ion-icon>
+                Duration: 60 minutes
               </li>
               <!-- Add more pros/cons or extra helpful information here -->
             </ul>
