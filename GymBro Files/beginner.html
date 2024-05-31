@@ -18,6 +18,7 @@
         padding: 0;
         background: linear-gradient(to right, #e0eafc, #cfdef3);
         color: #333;
+        min-height: 3000px;
       }
       header {
         background: #333;
@@ -48,8 +49,14 @@
         background: #fff;
         padding: 20px;
         margin: 20px 0;
+        
         border-radius: 10px;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .workout:hover {
+        transform: scale(1.02);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
       }
       .workout img {
         max-width: 100%;
@@ -61,6 +68,9 @@
         flex-direction: column;
         align-items: center;
         margin: 20px 0;
+        margin-bottom: 20px;
+      
+        
       }
       #timerDisplay {
         font-size: 2em;
@@ -68,7 +78,18 @@
       }
       .timer-buttons {
         display: flex;
+        flex-direction: column;
+        align-items: center;
         gap: 10px;
+      }
+      .horizontal{
+        display: flex;
+       
+        justify-content: center;
+        gap: 10px;
+      }
+      .horizontal > div {
+        margin: 0 500px;
       }
       .timer-buttons button,
       #setButton {
@@ -80,12 +101,14 @@
         background-color: #333;
         color: #fff;
         transition: background-color 0.3s ease, transform 0.3s ease;
+        justify-content: center;
       }
       .timer-buttons button:hover,
       #setButton:hover {
         background-color: #555;
         transform: scale(1.05);
       }
+      
       footer {
         background: #333;
         color: #fff;
@@ -94,7 +117,9 @@
         position: fixed;
         bottom: 0;
         width: 100%;
+        
       }
+      
     </style>
   </head>
   <body>
@@ -111,14 +136,17 @@
           id="timeInput"
           placeholder="Enter time in seconds"
         />
-        <button id="setButton">Set Timer</button>
-        <div id="timerDisplay">00:00</div>
-        <div class="timer-buttons">
-          <button id="startButton">Start</button>
-          <button id="pauseButton">Pause</button>
-          <button id="resetButton">Reset</button>
-        </div>
       </div>
+        
+      <div class="timer-buttons">
+        <button id="setButton">Set Timer</button>
+      <div id="timerDisplay">00:00</div>
+      <div class = "horizontal">
+        <button id="startButton">Start</button>
+        <button id="pauseButton">Pause</button>
+        <button id="resetButton">Reset</button>
+      </div>
+    </div>
       <article class="workout">
         <h2>Dips</h2>
         <img src="dips.gif" alt="Dips" style="width: 300px; height: auto" />
